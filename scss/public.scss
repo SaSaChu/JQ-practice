@@ -46,3 +46,63 @@ html {
     @include font-smoothing(antialiased);
   }
 }
+
+
+#top {
+  display: inline-block;
+  width: 200px;
+  padding: 15px;
+  border: 1px solid rgba(255, 0, 0, .3);
+
+  #in {}
+  button {}
+}
+
+
+#items {
+  display: inline-block;
+  width: 200px;
+  height: 100px;
+  border: 1px solid rgba(255, 0, 0, .3);
+}
+
+.bor {
+  // border-top: 1px solid red;
+  background-color: yellow;
+
+  // &:first-child {
+  //   border-top:0;
+  // }
+  
+  + .bor { // 我自己之後加上下面的效果
+    border-top: 1px solid red;
+  } 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
