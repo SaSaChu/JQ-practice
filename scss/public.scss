@@ -62,14 +62,44 @@ html {
 #items {
   display: inline-block;
   width: 200px;
-  height: 100px;
   border: 1px solid rgba(255, 0, 0, .3);
 }
 
-.bor {
-  // border-top: 1px solid red;
-  background-color: yellow;
 
+.ccc {
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+
+  @include clearfix();
+
+  p {
+    display: inline-block;
+    float: left;
+    width: 70%;
+    padding: 0;
+    margin: 0;
+    word-break: break-all;
+  }
+
+  a {
+    display: inline-block;
+    width: 30%;
+    float: left;
+    cursor: pointer;
+    text-decoration: none;
+    color: blue;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.bor {
+  display: inline-block;
+  width: 100%;
+  // border-top: 1px solid red;
   // &:first-child {
   //   border-top:0;
   // }
@@ -77,6 +107,13 @@ html {
   + .bor { // 我自己之後加上下面的效果
     border-top: 1px solid red;
   } 
+
+  // a {
+  //   display: inline-block;
+  //   cursor: pointer;
+  //   width: 50px;
+  //   height: 50px;
+  // }
 }
 
 
