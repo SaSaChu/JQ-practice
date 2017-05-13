@@ -46,3 +46,57 @@ html {
     @include font-smoothing(antialiased);
   }
 }
+
+
+#btn {
+  cursor: pointer;
+  display: inline-block;
+  width: 100px;
+  margin: 15px 0;
+  height: 50px;
+}
+
+
+.box {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border: 3px solid yellow;
+  margin: 15px 0;
+
+  &.a {
+    border: 3px solid red;
+  }
+
+  &.b {
+    border: 3px solid black;
+  }
+
+  &.c {
+    border: 3px solid green;
+  }
+
+  &.d {
+    border: 3px solid blue;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
