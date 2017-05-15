@@ -46,3 +46,92 @@ html {
     @include font-smoothing(antialiased);
   }
 }
+
+
+.boxs {
+  display: inline-block;
+  width: 1000px;
+  margin: 0 auto;
+
+  border: 1px solid rgba(255, 0, 0, .3);
+
+  @include split-left(400px, '.lboxs', '.rboxs');
+
+  .lboxs {
+    padding-right: 50px;
+
+    border: 1px solid rgba(255, 0, 0, .3);
+
+    .lbox {
+      display: inline-block;
+      width: 100%;
+      padding: 20px 10px;
+
+      #in, button {
+        display: inline-block;
+        padding: 10px 20px;
+        color: rgba(41, 38, 46, 1.00);
+        font-weight: 600;
+        outline: 0;
+        border: 0;
+        @include border-radius(3px);
+        font-size: 1em;
+      }
+
+      #in {
+        width: 70%;
+        float: left;
+        background-color: rgba(238, 238, 238, 1.00);
+      }
+
+      button {
+        cursor: pointer;
+        display: inline-block;
+        float: right;
+        padding: 10px 20px;
+        outline: 0;
+        border: 0;
+        color: rgba(41, 38, 46, 1.00);
+        font-weight: 600;
+        background-color: rgba(103, 199, 185, 1.00);
+        @include transition(color .3s);
+        
+        &:hover {
+          background-color: rgba(103, 199, 185, .5);
+        }
+      }
+    }
+  }
+
+  .rboxs {
+    border: 1px solid rgba(255, 0, 0, .3);
+    height: 100px;
+
+    .rbox {
+      display: inline-block;
+      width: 100%;
+
+      background-color: rgba(0, 0, 255, 0.2);
+    }
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
