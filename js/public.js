@@ -1,15 +1,32 @@
 
 $(function(){
 
-  var a = $('#id').val();
-
-
   $('button').click(function(){
 
-    $('.rboxs').append($('<div />').addClass('.rbox')).text(a);
+    var $v = $('#in').val();
+    var $div = $('<div />').addClass('rbox');
+    var $p = $('<p />').addClass('se').text($v);
+    var $a = $('<a />').text('Detel');
 
-    // console.log('12312');
+    $('.rboxs')
+      .append($div
+        .append($p).append($a)
+      );
+
+    $p.click(function() {
+      prompt();
+    });
+
+    $a.click(function() {
+      $div.remove();
+    });
+
+    $('#in').val('');
 
   });
 
 });
+
+
+
+      // console.log('adf');
