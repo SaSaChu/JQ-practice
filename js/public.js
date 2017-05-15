@@ -8,13 +8,16 @@ $(function(){
     var $p = $('<p />').addClass('se').text($v);
     var $a = $('<a />').text('Detel');
 
+
     $('.rboxs')
       .append($div
         .append($p).append($a)
       );
 
     $p.click(function() {
-      prompt();
+
+      prompt("請輸入你想說的");
+
     });
 
     $a.click(function() {
