@@ -53,14 +53,10 @@ html {
   width: 1000px;
   margin: 0 auto;
 
-  border: 1px solid rgba(255, 0, 0, .3);
-
   @include split-left(400px, '.lboxs', '.rboxs');
 
   .lboxs {
     padding-right: 50px;
-
-    border: 1px solid rgba(255, 0, 0, .3);
 
     .lbox {
       display: inline-block;
@@ -107,7 +103,6 @@ html {
 
   .rboxs {
     padding-top: 20px; 
-    border: 1px solid rgba(255, 0, 0, .3);
     height: 100px;
 
     .rbox {
@@ -115,6 +110,10 @@ html {
       width: 100%;
       padding: 15px;
       background-color: rgba(240, 240, 240, .5);
+
+      + .rbox {
+        margin-top: 10px;
+      }
 
       @include split-left(70%, 'p', 'a');
 
