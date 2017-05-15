@@ -6,7 +6,7 @@ $(function(){
 
   $('button').click(function(){
 
-    a.append('.rboxs');
+    $('.rboxs').append($('<div />').addClass('.rbox')).text(a);
 
     // console.log('12312');
 
