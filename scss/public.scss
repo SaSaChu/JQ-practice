@@ -46,3 +46,140 @@ html {
     @include font-smoothing(antialiased);
   }
 }
+
+.boxs {
+  display: inline-block;
+  width: 500px;
+  padding: 10px;
+
+  .topboxs {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0;
+    @include clearfix();
+    
+    #in, button {
+      display: inline-block;
+      border: 0;
+      outline: 0;
+      @include border-radius(3px);
+      font-size: 1em;
+    }
+
+    #in {
+      width: 380px;
+      float: left;
+      padding: 10px;
+      border: 1px solid rgba(213, 229, 253, 1.00);
+      outline: 0;
+    }
+
+    button {
+      cursor: pointer;
+      width: 80px;
+      background-color: rgba(69, 139, 244, 1.00);
+      padding: 8px 15px;
+      float: right;
+      color: white;
+      border: 0;
+      outline: 0;
+    }
+  }
+
+  .downboxs {
+    display: inline-block;
+    width: 100%;
+
+    .downbox {
+      display: inline-block;
+      width: 100%;
+      @include border-radius(3px);
+      background-color: rgba(238, 238, 238, .5);
+      @include transition(color .3s);
+      padding: 10px 15px;
+      
+      &.ch {
+        background-color: rgba(213, 229, 253, 1.00);
+      }
+
+      + .downbox {
+        margin-top: 10px;
+      }
+
+      @include split-right(150px, 'span', '.typebox');
+
+      span {
+        cursor: pointer;
+        font-size: .9em;
+        text-align: left;
+        line-height: 1.6em;
+        @include transition(color .3s);
+
+        &:hover {
+          color: rgba(75, 139, 245, 1.00);
+        }
+      }
+
+      .typebox {
+        @include clearfix();
+
+        > div {
+          display: inline-block;
+          float: left;
+
+          &:after {
+            display: inline-block;
+            content: '│';
+            margin: 0 10px;
+            color: rgba(172, 172, 172, 1.00);
+          }
+
+          &:last-child {
+            &:after {
+              display: none;
+              margin: 0;
+            }
+          }
+
+          a {
+            cursor: pointer;
+            font-size: .9em;
+            text-align: left;
+            line-height: 1.6em;
+            text-decoration: none;
+            @include transition(color .3s);
+            
+            &:hover {
+              color: rgba(75, 139, 245, 1.00);
+            }
+
+          }
+        }
+      }
+    }
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
