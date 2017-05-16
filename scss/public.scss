@@ -95,8 +95,8 @@ html {
       width: 100%;
       @include border-radius(3px);
       background-color: rgba(238, 238, 238, .5);
-      @include transition(color .3s);
       padding: 10px 15px;
+      @include transition(background-color .3s);
       
       &.ch {
         background-color: rgba(213, 229, 253, 1.00);
