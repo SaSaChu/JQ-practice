@@ -46,3 +46,111 @@ html {
     @include font-smoothing(antialiased);
   }
 }
+
+
+.boxs {
+  display: inline-block;
+  width: 500px;
+  padding: 10px;
+
+  .top {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    @include clearfix();
+        
+    #in, button {
+      display: inline-block;
+      outline: 0;
+      padding: 5px 10px;
+      font-size: 1em;
+      font-weight: 400;
+      @include border-radius(3px);
+    }
+
+    #in {
+      color: rgba(41, 38, 46, 1.00);
+      float: left;
+      width: 360px;
+      margin-right: 15px;
+      border: 1px solid rgba(213, 229, 253, 1.00);
+    }
+
+    button {
+      cursor: pointer;
+      border: 0;
+      width: 80px;
+      float: right;
+      background-color: rgba(75, 139, 245, 1.00);
+      color: white;
+      @include transition(background-color .3s);
+
+      &:hover {
+        background-color: rgba(75, 139, 245, .5);
+      }
+    }
+  }
+
+  .down {
+    display: inline-block;
+    width: 100%;
+        
+    .d_boxs {
+      display: inline-block;
+      width: 100%;
+      padding: 10px;
+      background-color: rgba(213, 229, 253, .8);
+      @include border-radius(3px);
+      @include split-left(300px, 'span', '.a_boxs');
+      
+      &.cc {
+        background-color: rgba(103, 199, 185, 1.00);
+      }
+
+      span {
+        padding: 1px 5px;
+        text-align: left;
+        word-break: normal;
+      }
+
+      .a_boxs {
+        @include clearfix();
+        
+        .a, .b, .c {
+          cursor: pointer;
+          display: inline-block;
+          float: left;
+          padding: 0 10px;
+          @include transition(color .3s);
+
+          &:hover {
+            color: rgba(41, 38, 46, 1.00);
+          }
+        }
+
+        .a, .b {
+          border-right: 1px solid rgba(172, 172, 172, 1.00); 
+        }
+      }
+
+      +.d_boxs {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
