@@ -46,3 +46,117 @@ html {
     @include font-smoothing(antialiased);
   }
 }
+
+
+.boxs {
+  display: inline-block;
+  width: 500px;
+  padding: 15px;
+
+  .top {
+    display: inline-block;
+    width: 100%;
+    @include clearfix();
+    padding-bottom: 10px;
+    
+    #in, button {
+      display: inline-block;
+      @include border-radius(3px);
+      outline: 0;    
+      font-size: 1em;
+      font-weight: 600;
+    }
+
+    #in {
+      padding: 10px;
+      width: 350px;
+      float: left;
+      color: rgba(41, 38, 46, 1.00);
+      border: 1px solid rgba(213, 229, 253, 1.00);
+    }
+
+    button {
+      width: 100px;
+      float: right;
+      border: 0;
+      background-color: rgba(105, 199, 183, 1.00);
+      color: white;
+      padding: 10px;
+      cursor: pointer;
+      @include transition(background-color .3s);
+      
+      &:hover {
+        color: rgba(41, 38, 46, 1.00);
+        background-color: rgba(105, 199, 183, .8);
+      }
+    }
+  }
+
+  .down {
+    display: inline-block;
+    width: 100%;
+    padding-top: 10px;
+
+    .ansbox {
+      display: inline-block;
+      width: 100%;
+      background-color: rgba(213, 229, 253, 1.00);
+      padding: 10px;
+      margin-top: 10px;
+      @include clearfix();
+
+
+      span {
+        display: inline-block;
+        color: rgba(41, 38, 46, 1.00);
+      }
+
+      .de {
+        display: inline-block;
+        float: right;
+        cursor: pointer;
+        @include transition(color .3s);
+
+        &:hover {
+          color: rgba(41, 38, 46, 1.00);
+        }
+      }
+    }
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
