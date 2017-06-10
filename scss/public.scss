@@ -46,3 +46,111 @@ html {
     @include font-smoothing(antialiased);
   }
 }
+
+
+.outboxs {
+  display: inline-block;
+  width: 500px;
+  margin: 0 auto;
+
+  .t_boxs {
+    display: inline-block;
+    width: 500px;
+    padding: 15px 0;
+    @include clearfix();
+
+    input, button {
+      padding: 10px;
+      font-size: 1em;
+      @include border-radius(3px);
+      outline: 0;
+      float: left;
+    }
+
+    input {
+      color: rgba(91, 90, 74, 1.00);
+      width: calc(100% - 80px - 10px);
+      margin-right: 10px;
+      border: 1px solid rgba(98, 106, 119, 1.00);
+    }
+
+    button {
+      color: white;
+      cursor: pointer;
+      width: 80px;
+      border: 0;
+      background-color: rgba(123, 29, 52, 1.00);
+      @include transition(background-color .3s);
+      
+      &:hover {
+        background-color: rgba(98, 21, 27, 1.00);
+      }
+    }
+  }
+
+
+  .d_boxs {
+    display: inline-block;
+    width: 500px;
+
+    .boxs {
+      display: inline-block;
+      width: 100%;
+      padding: 10px;
+      background-color: rgba(151, 135, 153, 1.00);
+      margin-top: 10px;
+      @include border-radius(3px);
+
+      &.change {
+        background-color: rgba(98, 106, 119, 1.00);
+      }
+
+      @include split-left(320px, '.l_box', '.r_box');
+
+      .l_box, .r_box {
+        color: white;
+        font-size: 1em;
+      }  
+
+      .l_box {
+        text-align: left;
+      }
+
+      .r_box {
+        @include clearfix();
+        
+        > div {
+          display: inline-block;
+          cursor: pointer;
+          padding: 0 10px;
+          font-size: 1em;
+          float: left;
+          border-right: 1px solid white;
+          @include transition(color .3s);
+          
+          &:last-child {
+            border-right: 0;
+          }
+
+          &:hover {
+            color: rgba(255, 220, 22, 1.00);
+          }
+        }
+      }
+    }
+
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
