@@ -1,7 +1,8 @@
 
 $(function () {
 
-  function create_box(v) {
+  function create_box(v) { 
+  // 這邊是宣告create_box這個盒子內容，做了哪些動作，v=type，（註一）
 
     var $div = $('<div />');
 
@@ -23,7 +24,8 @@ $(function () {
   $('button').click(function() {
 
     var type = $('#in').val();
-    var ans = create_box(type);
+    var ans = create_box(type); 
+    // 宣告function盒子的名稱，create_box就是盒子的名稱（註一），盒子裡面裝著上一行type的質
 
     $('.d_boxs').append(ans);
 
