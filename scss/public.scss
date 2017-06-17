@@ -46,3 +46,59 @@ html {
     @include font-smoothing(antialiased);
   }
 }
+
+
+
+.t_boxs {
+  display: block;
+  width: 300px;
+  margin: 0 auto;
+  padding: 10px 0;
+
+  #in {}
+  button {}
+}
+
+.d_boxs {
+  display: block;
+  width: 300px;
+  margin: 0 auto;
+
+  div {
+    display: inline-block;
+    width: 100%;
+    @include clearfix();
+
+    span, a {
+      display: inline-block;
+      padding: 10px 0;
+    }
+
+    span {
+      float: left;
+    }
+
+    a {
+      cursor: pointer;
+      float: right;
+    }
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
