@@ -46,3 +46,33 @@ html {
     @include font-smoothing(antialiased);
   }
 }
+
+.t_boxs {
+  display: block;
+  width: 500px;
+  margin: 0 auto;
+
+  padding: 10px 0;
+
+  #weight {}
+  #height {}
+  button {
+    cursor: pointer;
+  }
+}
+
+.d_boxs {
+  display: block;
+  width: 500px;
+  margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
